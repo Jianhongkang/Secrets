@@ -31,14 +31,6 @@ mongoose.set("strictQuery", false);
 ///////// CONNECTION TO MONGO ATLAS CLUSTER/////////
 mongoose.connect("mongodb+srv://"+process.env.ATLAS_ADMIN_USERNAME +":"+ process.env.ATLAS_ADMIN_PASSWORD+"@cluster0.khvebqd.mongodb.net/userDB");
 
-
-/////////SECRET SCHEMA AND COLLECTION/MODEL/////////
-// const secretSchema = new mongoose.Schema({
-//     secret: String,
-//     timestamp : {type: Number, default: Date.now}
-//   });
-// const Secret = mongoose.model('Secret', secretSchema);
-
 /////////USER SCHEMA AND COLLECTION/MODEL/////////
 const userSchema = new mongoose.Schema({
     email:String,
